@@ -10,11 +10,10 @@ import { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { onAuthStateChanged } from 'firebase/auth';
-import { auth, db } from './config/firebase';
+import { auth } from './config/firebase';
 import { setCurrentUser, setIsLoggedIn } from './features/auth/auth.slice';
 import { getMessagesList } from './features/messages/messages.actions';
 import { setMessagesList } from './features/messages/messages.slice';
-import { collection, onSnapshot } from 'firebase/firestore';
 
 const Root = () => {
   return (
@@ -30,17 +29,14 @@ const Root = () => {
 const App = () => {
   const dispatch = useDispatch();
 
-  const { loading, currentUser, error, loginSuccess, isLoggedIn } = useSelector((state) => state.auth);
+  const { currentUser, isLoggedIn } = useSelector((state) => state.auth);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        // console.log(`there's user: `, user)
         dispatch(setCurrentUser(user));
-        // console.log('setting isloggedin to true')
         dispatch(setIsLoggedIn(true));
       } else {
-        // console.log('theres no user: ', user, 'setting isloggedin to false')
         dispatch(setCurrentUser(null));
         dispatch(setIsLoggedIn(false));
       }
@@ -52,26 +48,12 @@ const App = () => {
 
   useEffect(() => {
     if (isLoggedIn) {
-      // console.log('getting messages in the app if loggedIn');
       dispatch(getMessagesList());
     } else {
       dispatch(setMessagesList(null));
     }
 
   }, [currentUser, isLoggedIn])
-
-  // const messagesCollectionRef = collection(db, 'messages');
-  
-  // onSnapshot(messagesCollectionRef, (snapshot) => {
-  //   let messages = [];
-  //   snapshot.docs.forEach(doc => {
-  //     console.log('the doc: ', doc)
-  //     messages.push({...doc.data, id: doc.id})
-  //   });
-
-  //   console.log('messages in the onsnapshot listener: ', messages)
-  // })
-
 
   return (
     <BrowserRouter>

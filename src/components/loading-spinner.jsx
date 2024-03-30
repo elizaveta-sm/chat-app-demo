@@ -1,5 +1,3 @@
-import React from 'react'
-
 const LoadingSpinner = () => {
     return (
         <div role="status" className='grid place-items-center h-full'>
@@ -12,4 +10,4 @@ const LoadingSpinner = () => {
     )
 }
 
-export default LoadingSpinner
+export default LoadingSpinner;
