@@ -1,12 +1,12 @@
 # Full-Stack Chat App with React & Firebase
 
-<!-- TODO -->
 > :speech_balloon: На русском:
 > 
-> [![Static Badge](https://img.shields.io/badge/lang-ru-%23e3242b)]()
+> [![Static Badge](https://img.shields.io/badge/lang-ru-%23e3242b)](https://github.com/elizaveta-sm/chat-app-demo/blob/main/README.ru.md)
+
 
 > [!IMPORTANT]
-> The app is **live** on [Firebase](https://firebase.google.com/). Feel free to **experience** the app **firsthand** by following the link: [Chat App](https://chat-app-demo-17b82.firebaseapp.com/).
+> The app is **live** on [Firebase](https://firebase.google.com/). Feel free to **experience** the app **firsthand** by following **the link**: [Chat App](https://chat-app-demo-17b82.firebaseapp.com/).
 
 
 > [!WARNING]  
@@ -38,17 +38,17 @@
 
 <img alt="chat app logo" src="./Images/logo-9.png" height="175" />
 
-:iphone: *Chat App* :iphone: is a full-stack web application built for real-time communication between users in a shared chat room. It uses Google authentication for quick and easy login.  
+:iphone:**Chat App**:iphone: is a full-stack web application built for **real-time communication** between users in a shared chat room. It **uses Google authentication** for quick and easy login.  
 
 &nbsp; 
 
 ### Key Features Include
 
-:zap: **Sign in with your Google account**.
+:zap: Sign in with your Google account.
 
-:zap: **Send and receive text messages**. 
+:zap: Send and receive text messages. 
 
-:zap: **Share images**. 
+:zap: Share images. 
 
 > See <a href="#usage">Usage</a> for detailed information.
 
@@ -71,7 +71,7 @@
 
 ### Deployed With
 
-**Frontend and Backend**: [Firebase Hosting](https://firebase.google.com/docs/hosting)
+:zap: **Frontend and Backend**: [Firebase Hosting](https://firebase.google.com/docs/hosting)
 
 > See <a href="#acknowledgments">Acknowledgments</a> for more information.
 
@@ -84,7 +84,8 @@
 <img align="center" src="./Images/login-page.jpg" height="700" />
 
 You can sign in securely using your Google account.
-:grey_exclamation: Only **authenticated** users can access the chat as the app utilizes private routes.
+
+:memo: Only **authenticated** users can access the chat as the app utilizes private routes (protected routes).
 
 ---
 
@@ -125,4 +126,3 @@ Distributed under the MIT License.
 :gem: [react-lazyload](https://www.npmjs.com/package/react-lazyload)
 
 :gem: [uuid](https://www.npmjs.com/package/uuid)
-
